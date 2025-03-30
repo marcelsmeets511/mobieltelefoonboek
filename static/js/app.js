@@ -125,7 +125,7 @@ Ext.onReady(function() {
         cls: 'search-results',
         store: searchResultsStore,
         hidden: true,
-        width: '100%',
+        width: 1350,
         flex: 1,
         columns: [
             {
