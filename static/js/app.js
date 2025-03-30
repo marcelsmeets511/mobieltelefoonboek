@@ -132,7 +132,8 @@ Ext.onReady(function() {
                 text: 'Telefoonnummer',
                 dataIndex: 'telefoonnummer',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="tel://' + value + '">' + value + '</a>';
@@ -144,7 +145,8 @@ Ext.onReady(function() {
                 text: 'Facebook ID',
                 dataIndex: 'facebookid',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="https://facebook.com/' + value + '" target="_blank">' + value + '</a>';
@@ -156,7 +158,8 @@ Ext.onReady(function() {
                 text: 'Voornaam',
                 dataIndex: 'voornaam',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?voornaam=' + value + '" target="_blank">' + value + '</a>';
@@ -168,7 +171,8 @@ Ext.onReady(function() {
                 text: 'Achternaam',
                 dataIndex: 'achternaam',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?achternaam=' + value + '" target="_blank">' + value + '</a>';
@@ -180,7 +184,8 @@ Ext.onReady(function() {
                 text: 'Geslacht',
                 dataIndex: 'geslacht',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?geslacht=' + value + '" target="_blank">' + value + '</a>';
@@ -192,7 +197,8 @@ Ext.onReady(function() {
                 text: 'Plaatsnaam',
                 dataIndex: 'plaatsnaam',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?plaatsnaam=' + value + '" target="_blank">' + value + '</a>';
@@ -204,7 +210,8 @@ Ext.onReady(function() {
                 text: 'Land',
                 dataIndex: 'land',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?land=' + value + '" target="_blank">' + value + '</a>';
@@ -216,7 +223,8 @@ Ext.onReady(function() {
                 text: 'Status',
                 dataIndex: 'status',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?status=' + value + '" target="_blank">' + value + '</a>';
@@ -228,7 +236,8 @@ Ext.onReady(function() {
                 text: 'Bedrijfsnaam',
                 dataIndex: 'bedrijfsnaam',
                 cls: 'search-column',
-                //flex: 1,
+                width: 100,
+                flex: 1,
                 renderer: function(value) {
                     if (value) {
                         return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?bedrijfsnaam=' + value + '" target="_blank">' + value + '</a>';
