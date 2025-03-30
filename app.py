@@ -49,7 +49,7 @@ def search():
     geboorteplaats = request.form.get('geboorteplaats', '')
     status = request.form.get('status', '')
     bedrijfsnaam = request.form.get('bedrijfsnaam', '')
-    perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam)
+    return perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam)
 
 @app.route('/searchagain', methods=['GET'])
 def searchagain():
@@ -64,7 +64,7 @@ def searchagain():
     geboorteplaats = request.args.get('geboorteplaats', '')
     status = request.args.get('status', '')
     bedrijfsnaam = request.args.get('bedrijfsnaam', '')
-    perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam)
+    return perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam)
 
 def perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam):
     # Build the SQL query dynamically
