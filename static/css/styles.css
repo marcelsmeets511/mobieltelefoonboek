@@ -7,7 +7,6 @@ body {
 
 .x-box-inner {
     overflow:scroll !important;
-    height:100vh !important;
 }
 
 #app-container {
