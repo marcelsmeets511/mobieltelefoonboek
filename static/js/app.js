@@ -50,48 +50,39 @@ Ext.onReady(function() {
         items: [
             {
                 fieldLabel: 'Telefoonnummer',
-                name: 'telefoonnummer',
-                emptyText: 'Voer telefoonnummer in...'
+                name: 'telefoonnummer'
             },
             {
                 fieldLabel: 'Facebook ID',
-                name: 'facebookid',
-                emptyText: 'Voer Facebook ID in...'
+                name: 'facebookid'
             },
             {
                 fieldLabel: 'Voornaam',
-                name: 'voornaam',
-                emptyText: 'Voer voornaam in...'
+                name: 'voornaam'
             },
             {
                 fieldLabel: 'Achternaam',
-                name: 'achternaam',
-                emptyText: 'Voer achternaam in...'
+                name: 'achternaam'
             },
             {
                 fieldLabel: 'Geslacht',
-                name: 'geslacht',
-                emptyText: 'Voer geslacht in...'
+                name: 'geslacht'
             },
             {
                 fieldLabel: 'Plaatsnaam',
-                name: 'plaatsnaam',
-                emptyText: 'Voer plaatsnaam in...'
+                name: 'plaatsnaam'
             },
             {
                 fieldLabel: 'Geboorteplaats',
-                name: 'geboorteplaats',
-                emptyText: 'Voer geboorteplaats in...'
+                name: 'geboorteplaats'
             },
             {
                 fieldLabel: 'Status',
-                name: 'status',
-                emptyText: 'Voer status in...'
+                name: 'status'
             },
             {
                 fieldLabel: 'Bedrijfsnaam',
-                name: 'bedrijfsnaam',
-                emptyText: 'Voer bedrijfsnaam in...'
+                name: 'bedrijfsnaam'
             }
         ],
         buttons: [
