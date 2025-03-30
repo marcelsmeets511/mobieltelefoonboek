@@ -1,4 +1,7 @@
 Ext.onReady(function() {
+    // Get the current URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+
     // Configure Ext.js for responsive design
 /*    Ext.override(Ext.container.Container, {
         responsiveConfig: {
@@ -32,6 +35,10 @@ Ext.onReady(function() {
         }
     });
 
+    var httpgetparam = function(p,urlParams) {
+      return urlParams.get(p) != '' ? urlParams.get(p) : ''
+    }
+
     // Create the search form
     var searchForm = Ext.create('Ext.form.Panel', {
         title: 'Zoek Profielen',
@@ -50,39 +57,48 @@ Ext.onReady(function() {
         items: [
             {
                 fieldLabel: 'Telefoonnummer',
-                name: 'telefoonnummer'
-            },
+                name: 'telefoonnummer',
+                text: httpgetparam('telefoonnummer',urlParams)
+.            },
             {
                 fieldLabel: 'Facebook ID',
-                name: 'facebookid'
+                name: 'facebookid',
+                text: httpgetparam('facebookid',urlParam)
             },
             {
                 fieldLabel: 'Voornaam',
-                name: 'voornaam'
+                name: 'voornaam',
+                text: httpgetparam('voornaam',urlParam)
             },
             {
                 fieldLabel: 'Achternaam',
-                name: 'achternaam'
+                name: 'achternaam',
+                text: httpgetparam('achternaam',urlParam)
             },
             {
                 fieldLabel: 'Geslacht',
-                name: 'geslacht'
+                name: 'geslacht',
+                text: httpgetparam('geslacht',urlParam)
             },
             {
                 fieldLabel: 'Plaatsnaam',
-                name: 'plaatsnaam'
+                name: 'plaatsnaam',
+                text: httpgetparam('plaatsnaam',urlParam)
             },
             {
                 fieldLabel: 'Land',
-                name: 'land'
+                name: 'land',
+                text: httpgetparam('land',urlParam)
             },
             {
                 fieldLabel: 'Status',
-                name: 'status'
+                name: 'status',
+                text: httpgetparam('status',urlParam)
             },
             {
                 fieldLabel: 'Bedrijfsnaam',
-                name: 'bedrijfsnaam'
+                name: 'bedrijfsnaam',
+                text: httpgetparam('bedrijfsnaam',urlParam)
             }
         ],
         buttons: [
@@ -125,8 +141,7 @@ Ext.onReady(function() {
         cls: 'search-results',
         store: searchResultsStore,
         hidden: true,
-        width: 1350,
-        flex: 1,
+        width: '1350px',
         columns: [
             {
                 text: 'Telefoonnummer',
@@ -259,7 +274,7 @@ Ext.onReady(function() {
     // Create the main container
     Ext.create('Ext.container.Viewport', {
         layout: {
-            type: 'vbox',
+            type: 'hbox',
             align: 'stretch'
         },
         items: [
@@ -267,7 +282,7 @@ Ext.onReady(function() {
                 xtype: 'container',
                 padding: 20,
                 layout: {
-                    type: 'vbox',
+                    type: 'hbox',
                     align: 'stretch'
                 },
                 items: [searchForm, resultsGrid]
