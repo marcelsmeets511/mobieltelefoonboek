@@ -46,10 +46,10 @@ def search():
     achternaam = request.form.get('achternaam', '')
     geslacht = request.form.get('geslacht', '')
     plaatsnaam = request.form.get('plaatsnaam', '')
-    geboorteplaats = request.form.get('geboorteplaats', '')
+    land = request.form.get('land', '')
     status = request.form.get('status', '')
     bedrijfsnaam = request.form.get('bedrijfsnaam', '')
-    return perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam)
+    return perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,land,status,bedrijfsnaam)
 
 @app.route('/searchagain', methods=['GET'])
 def searchagain():
@@ -61,12 +61,12 @@ def searchagain():
     achternaam = request.args.get('achternaam', '')
     geslacht = request.args.get('geslacht', '')
     plaatsnaam = request.args.get('plaatsnaam', '')
-    geboorteplaats = request.args.get('geboorteplaats', '')
+    land = request.args.get('land', '')
     status = request.args.get('status', '')
     bedrijfsnaam = request.args.get('bedrijfsnaam', '')
-    return perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam)
+    return perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,land,status,bedrijfsnaam)
 
-def perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam):
+def perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,land,status,bedrijfsnaam):
     # Build the SQL query dynamically
     query = "SELECT * FROM profiles WHERE 1=1"
     params = []
@@ -87,11 +87,12 @@ def perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,
         query += " AND geslacht ILIKE %s"
         params.append(f"%{geslacht}%")
     if plaatsnaam:
-        query += " AND plaatsnaam ILIKE %s"
+        query += " AND (plaatsnaam ILIKE %s OR geboorteplaats ILIKE %s)"
         params.append(f"%{plaatsnaam}%")
-    if geboorteplaats:
-        query += " AND geboorteplaats ILIKE %s"
-        params.append(f"%{geboorteplaats}%")
+        params.append(f"%{plaatsnaam}%")
+    if land:
+        query += " AND land ILIKE %s"
+        params.append(f"%{land}%")
     if status:
         query += " AND status ILIKE %s"
         params.append(f"%{status}%")

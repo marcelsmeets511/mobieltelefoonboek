@@ -16,7 +16,7 @@ Ext.onReady(function() {
         extend: 'Ext.data.Model',
         fields: [
             'telefoonnummer', 'facebookid', 'voornaam', 'achternaam', 
-            'geslacht', 'plaatsnaam', 'geboorteplaats', 'status', 'bedrijfsnaam'
+            'geslacht', 'plaatsnaam', 'land', 'status', 'bedrijfsnaam'
         ]
     });
 
@@ -73,8 +73,8 @@ Ext.onReady(function() {
                 name: 'plaatsnaam'
             },
             {
-                fieldLabel: 'Geboorteplaats',
-                name: 'geboorteplaats'
+                fieldLabel: 'Land',
+                name: 'land'
             },
             {
                 fieldLabel: 'Status',
@@ -195,12 +195,12 @@ Ext.onReady(function() {
                 }
             },
             {
-                text: 'Geboorteplaats',
-                dataIndex: 'geboorteplaats',
+                text: 'Land',
+                dataIndex: 'land',
                 flex: 1,
                 renderer: function(value) {
                     if (value) {
-                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?geboorteplaats=' + value + '" target="_blank">' + value + '</a>';
+                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?land=' + value + '" target="_blank">' + value + '</a>';
                     }
                     return '';
                 }
