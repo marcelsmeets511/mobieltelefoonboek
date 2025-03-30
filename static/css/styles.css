@@ -36,6 +36,10 @@ body {
     margin-top: 20px;
 }
 
+.search-column {
+  min-width: 100px;
+}
+
 .x-grid-cell-inner {
     white-space: normal !important;
 }
