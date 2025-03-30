@@ -14,7 +14,7 @@ body {
     height: 100vh;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments 
 @media (max-width: 768px) {
     .x-form-item {
         margin-bottom: 10px !important;
@@ -24,6 +24,7 @@ body {
         padding: 10px !important;
     }
 }
+*/
 
 /* Custom styling for the search form */
 .search-form {
@@ -34,6 +35,7 @@ body {
 
 .search-results {
     margin-top: 20px;
+    min-width: 1350px;
 }
 
 .search-column {

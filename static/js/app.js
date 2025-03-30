@@ -276,7 +276,7 @@ Ext.onReady(function() {
     // Create the main container
     Ext.create('Ext.container.Viewport', {
         layout: {
-            type: 'hbox',
+            type: 'vbox',
             align: 'stretch'
         },
         items: [
@@ -284,7 +284,7 @@ Ext.onReady(function() {
                 xtype: 'container',
                 padding: 20,
                 layout: {
-                    type: 'hbox',
+                    type: 'vbox',
                     align: 'stretch'
                 },
                 items: [searchForm, resultsGrid]
