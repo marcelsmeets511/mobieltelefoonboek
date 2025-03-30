@@ -153,37 +153,79 @@ Ext.onReady(function() {
             {
                 text: 'Voornaam',
                 dataIndex: 'voornaam',
-                flex: 1
+                flex: 1,
+                renderer: function(value) {
+                    if (value) {
+                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?voornaam=' + value + '" target="_blank">' + value + '</a>';
+                    }
+                    return '';
+                }
             },
             {
                 text: 'Achternaam',
                 dataIndex: 'achternaam',
-                flex: 1
+                flex: 1,
+                renderer: function(value) {
+                    if (value) {
+                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?achternaam=' + value + '" target="_blank">' + value + '</a>';
+                    }
+                    return '';
+                }
             },
             {
                 text: 'Geslacht',
                 dataIndex: 'geslacht',
-                flex: 1
+                flex: 1,
+                renderer: function(value) {
+                    if (value) {
+                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?geslacht=' + value + '" target="_blank">' + value + '</a>';
+                    }
+                    return '';
+                }
             },
             {
                 text: 'Plaatsnaam',
                 dataIndex: 'plaatsnaam',
-                flex: 1
+                flex: 1,
+                renderer: function(value) {
+                    if (value) {
+                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?plaatsnaam=' + value + '" target="_blank">' + value + '</a>';
+                    }
+                    return '';
+                }
             },
             {
                 text: 'Geboorteplaats',
                 dataIndex: 'geboorteplaats',
-                flex: 1
+                flex: 1,
+                renderer: function(value) {
+                    if (value) {
+                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?geboorteplaats=' + value + '" target="_blank">' + value + '</a>';
+                    }
+                    return '';
+                }
             },
             {
                 text: 'Status',
                 dataIndex: 'status',
-                flex: 1
+                flex: 1,
+                renderer: function(value) {
+                    if (value) {
+                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?status=' + value + '" target="_blank">' + value + '</a>';
+                    }
+                    return '';
+                }
             },
             {
                 text: 'Bedrijfsnaam',
                 dataIndex: 'bedrijfsnaam',
-                flex: 1
+                flex: 1,
+                renderer: function(value) {
+                    if (value) {
+                        return '<a href="https://mobieltelefoonboek.onrender.com/searchagain?bedrijfsnaam=' + value + '" target="_blank">' + value + '</a>';
+                    }
+                    return '';
+                }
             }
         ],
         viewConfig: {

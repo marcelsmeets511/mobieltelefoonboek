@@ -49,7 +49,24 @@ def search():
     geboorteplaats = request.form.get('geboorteplaats', '')
     status = request.form.get('status', '')
     bedrijfsnaam = request.form.get('bedrijfsnaam', '')
+    perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam)
 
+@app.route('/searchagain', methods=['GET'])
+def searchagain():
+    """Handle a second search request called from the results grid and return as JSON"""
+    # Get search parameters from url parameters
+    telefoonnummer = request.args.get('telefoonnummer', '')
+    facebookid = request.args.get('facebookid', '')
+    voornaam = request.args.get('voornaam', '')
+    achternaam = request.args.get('achternaam', '')
+    geslacht = request.args.get('geslacht', '')
+    plaatsnaam = request.args.get('plaatsnaam', '')
+    geboorteplaats = request.args.get('geboorteplaats', '')
+    status = request.args.get('status', '')
+    bedrijfsnaam = request.args.get('bedrijfsnaam', '')
+    perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam)
+
+def perform_search_query(telefoonnummer,facebookid,voornaam,achternaam,geslacht,plaatsnaam,geboorteplaats,status,bedrijfsnaam):
     # Build the SQL query dynamically
     query = "SELECT * FROM profiles WHERE 1=1"
     params = []
