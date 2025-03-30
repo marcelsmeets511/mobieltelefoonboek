@@ -37,7 +37,7 @@ body {
 }
 
 .search-column {
-  min-width: 300px;
+  min-width: 100px;
 }
 
 .x-grid-cell-inner {
