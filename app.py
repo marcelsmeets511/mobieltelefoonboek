@@ -83,7 +83,7 @@ def search():
         params.append(f"%{bedrijfsnaam}%")
 
     # Add limit to prevent overwhelming results (since there are 5M+ records)
-    query += " LIMIT 100"
+    #query += " LIMIT 100"
 
     try:
         conn = get_db_connection()
