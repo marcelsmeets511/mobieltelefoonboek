@@ -1,6 +1,6 @@
 Ext.onReady(function() {
     // Configure Ext.js for responsive design
-    Ext.override(Ext.container.Container, {
+/*    Ext.override(Ext.container.Container, {
         responsiveConfig: {
             'width < 768': {
                 layout: 'vbox'
@@ -9,7 +9,7 @@ Ext.onReady(function() {
                 layout: 'hbox'
             }
         }
-    });
+    });*/
 
     // Define the data model for search results
     Ext.define('SearchResult', {
