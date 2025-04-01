@@ -265,9 +265,9 @@ Ext.onReady(function() {
             enableTextSelection: true,
             listeners: {
             refresh: function(dataview) {
-                for (i=0; i<dataview.panel.columns.length; i++) {
-                    dataview.panel.columns[i].autoSize();
-                }
+                //for (i=0; i<dataview.panel.columns.length; i++) {
+                    dataview.panel.columns[0].autoSize();
+                //}
             }
         }
         }
