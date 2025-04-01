@@ -59,7 +59,7 @@ Ext.onReady(function() {
                 fieldLabel: 'Telefoonnummer',
                 name: 'telefoonnummer',
                 text: httpgetparam('telefoonnummer',urlParams)
-.            },
+            },
             {
                 fieldLabel: 'Facebook ID',
                 name: 'facebookid',
