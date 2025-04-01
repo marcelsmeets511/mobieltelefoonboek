@@ -48,7 +48,7 @@ def search():
     plaatsnaam = request.form.get('plaatsnaam', '')
     land = request.form.get('land', '')
     status = request.form.get('status', '')
-    bedrijfsnaam = request.form.get('bedrijfsnaam', '')h
+    bedrijfsnaam = request.form.get('bedrijfsnaam', '')
     # Build the SQL query dynamically
     query = "SELECT * FROM profiles WHERE 1=1"
     params = []
